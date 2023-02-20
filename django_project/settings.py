@@ -35,6 +35,12 @@ INSTALLED_APPS = [
     'posts.apps.PostsConfig',
 ]
 
+REST_FRAMEWORK = {
+    'DEFAULT_PERMISSION_CLASSES': [
+        'rest_framework.permissions.IsAuthenticated',
+    ]
+}
+
 MIDDLEWARE = [
     'django.middleware.security.SecurityMiddleware',
     'django.contrib.sessions.middleware.SessionMiddleware',
@@ -125,5 +131,5 @@ CORS_ORIGIN_WHITELIST = (
     'http://localhost:3000',
     'http://localhost:8000',
 )
-CSRF_TRUSTED_ORIGINS = ['https://localhost:3000'] 
+CSRF_TRUSTED_ORIGINS = ['https://localhost:3000']
 
